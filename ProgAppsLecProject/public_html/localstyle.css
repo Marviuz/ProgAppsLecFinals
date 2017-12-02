@@ -23,7 +23,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    opacity: 0;
+    opacity: 0.5;
     transition: 1s;
     position: fixed;
     top: 0;
