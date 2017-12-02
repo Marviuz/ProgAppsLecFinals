@@ -23,7 +23,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    opacity: 0.5;
+    background: rgba(0,0,0,0);
     transition: 1s;
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ ul {
 }
 
 ul:hover:not(.active) {
-    opacity: 1;
+    background: rgba(0,0,0,0.6);
 }
 
 li {
@@ -63,4 +63,20 @@ li a:hover:not(.active) {
     right: 0;
     position: fixed;
     color: white;
+}
+
+#about {
+    margin: 10%;
+    padding: 5px;
+    z-index: -1;
+    position: absolute;
+    color: white;
+    background-color: #333;
+    background: rgba(0,0,0,0.5);
+}
+
+#slideshow {
+    margin-left: 60%;
+    margin-top: 10%;
+    position: absolute;
 }

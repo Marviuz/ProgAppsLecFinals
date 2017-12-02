@@ -10,6 +10,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="localstyle.css" rel="stylesheet" type="text/css"/>
+        <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
     </head>
     <body>
         <ul>
@@ -18,5 +23,20 @@ and open the template in the editor.
             <li><a href="#about">About</a></li>
             <li><center><h3 id="logo">INNOVATIVE SOLUTIONS Inc.</h3></center></li>
         </ul>
+        
+        <div id="about">
+            <h3>About</h3>
+            <p>
+                We are a group of website developers who helps <br>
+                in making your own website's appearance and<br>
+                functionalities
+            </p>
+        </div>
+        
+        <div id="slideshow">
+            <iframe src="slideshow.html" frameborder="0" scrolling="no" onload="resizeIframe(this)">
+                YOUR BROWSER DOES NOT SUPPORT IFRAME
+            </iframe>
+        </div>
     </body>
 </html>
