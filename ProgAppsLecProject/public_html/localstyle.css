@@ -99,3 +99,12 @@ tr {
 #icon {
     width: 30%;
 }
+
+#cr {
+    padding-top: 100%;
+    text-align: center;
+}
+
+#footer {
+    background-color: grey;
+}
