@@ -30,7 +30,7 @@ ul {
     width: 100%;
 }
 
-ul:hover:not(.active) {
+ul:hover {
     background: rgba(0,0,0,0.6);
 }
 
@@ -48,12 +48,8 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li a:hover {
     background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
 }
 
 #logo {
@@ -65,9 +61,10 @@ li a:hover:not(.active) {
     color: white;
 }
 
-#about {
+#home {
     margin: 10%;
-    padding: 5px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
     z-index: -1;
     position: absolute;
     color: white;
@@ -79,4 +76,26 @@ li a:hover:not(.active) {
     margin-left: 50%;
     margin-top: 10%;
     position: absolute;
+    z-index: -1;
+}
+
+#contact {
+    color: white;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+table {
+    color: black;
+}
+
+tr {
+    background-color: white;
+}
+
+#icon {
+    width: 30%;
 }

@@ -6,26 +6,48 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>INNOVATIVE SOLUTIONS Inc.</title>
+        <title>INNOVATIVE Solutions Inc.</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="localstyle.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" href="images/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
             function resizeIframe(obj) {
                 obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
             }
+            
+            
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+
+                    if (this.hash !== "") {
+                        event.preventDefault();
+
+                        var hash = this.hash;
+
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
         </script>
     </head>
     <body>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-            <li><center><h3 id="logo">INNOVATIVE SOLUTIONS Inc.</h3></center></li>
+            <li><a href="#h">Home</a></li>
+            <li><a href="#team">The Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><center><h3 id="logo">INNOVATIVE Solutions Inc.</h3></center></li>
         </ul>
         
-        <div id="about">
+        <div id="h"></div>
+        
+        <div id="home">
             <h3>About</h3>
             <p>
                 We are a group of website developers who helps <br>
@@ -39,5 +61,88 @@ and open the template in the editor.
                 YOUR BROWSER DOESN'T SUPPORT IFRAME
             </iframe>
         </div>
+        <!--
+        <div id="team">
+            
+        </div>
+        -->
+        <div id="contact">
+            <center><h3>Contact Us</h3></center>
+            <table cellpadding="10%" style="border-spacing: 5px 5px;">
+                <col width="400">
+                <tr>
+                    <td rowspan="2">
+                        <form>
+                            Email <br>
+                            <input type="text" name="email" size="35"><br><br>
+                            Name <br>
+                            <input type="text" name="name" size="35"><br><br>
+                            Mobile Number <br>
+                            <input type="text" name="name"><br><br>
+                            Message <br>
+                            <textarea rows="7" cols="50" style="resize: none;">
+
+                            </textarea> <br>
+                            <input type="checkbox" name="term" value="term">I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </td>
+                    <td>
+                        <table style="border-spacing: 0 10px;">
+                            <tr>
+                                <td colspan="2" align="center">
+                                    Our Address
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/icon.png" id="car" style="width: 50%;">
+                                </td>
+                                <td style="width: 50%;">
+                                    No. 69 Address Sample Road, Baguio City
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/phone.png" id="phone" style="width: 30%;"><br>
+                                </td>
+                                <td>
+                                    0953 432 1684<br>
+                                    0965 246 1165
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <center>Follow Us</center><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <img src="images/icon1.jpg" id="icon">
+                                </td>
+                                <td align="center">
+                                    <img src="images/icon2.jpg" id="icon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <img src="images/icon3.jpg" id="icon">
+                                </td>
+                                <td align="center">
+                                    <img src="images/icon4.jpg" id="icon">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
     </body>
 </html>
