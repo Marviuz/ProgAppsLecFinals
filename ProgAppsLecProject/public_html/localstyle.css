@@ -93,7 +93,7 @@ table {
     color: black;
 }
 
-tr {
+tr:not(#lead) {
     background-color: white;
 }
 
